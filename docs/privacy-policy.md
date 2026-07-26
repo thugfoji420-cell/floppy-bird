@@ -1,78 +1,209 @@
 ---
 title: Privacy Policy
 description: Neon Flap 2100 Privacy Policy
+effective_date: July 2026
 ---
 
 # Privacy Policy
 
-**Neon Flap 2100** | Effective Date: July 2026  
-Developer: Nexora Studios
+**Effective Date:** July 1, 2026
+**Last Updated:** July 1, 2026
+**Developer:** Nexora Studio
+**Application:** Neon Flap 2100
+**Platform:** Android
 
 ---
 
-## Introduction
+## 1. Introduction
 
-Welcome to Neon Flap 2100, developed by Nexora Studios. Your privacy is important to us. This Privacy Policy explains what information we collect, how we use it, and how we protect it.
+Welcome to Neon Flap 2100 ("the Game"), developed by Nexora Studio ("we," "us," or "our"). This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our Game on Android devices. By downloading, installing, or using the Game, you agree to the practices described in this Privacy Policy.
 
-## Information We Collect
+We are committed to protecting your privacy and handling your data with transparency and care. This policy complies with the Google Play Developer Data Safety requirements, the General Data Protection Regulation (GDPR), the California Consumer Privacy Act (CCPA), and other applicable privacy laws.
 
-Depending on the features you use, we may collect:
+## 2. Information We Collect
 
-- **Google Account Information** (such as your name, profile picture, Google ID, and email address) if you choose to sign in using Google Sign-In.
-- **Game Information** such as coins, achievements, high scores, settings, and game progress.
-- **Device Information** required for improving app performance.
-- **Advertising Information** provided by Google AdMob.
-- **Diagnostic Information** and crash reports via Firebase Crashlytics.
+### 2.1 Information You Provide Directly
 
-## How We Use Your Information
+| Data Type | Purpose | Storage Location |
+|-----------|---------|------------------|
+| **Player Name** | Display on leaderboards and in-game | Firebase Firestore |
+| **Google Account Email** | Authentication and cloud save | Firebase Auth / Firestore |
+| **Google Display Name** | Profile display in-game | Firebase Auth |
+| **Google Profile Picture URL** | Profile display in-game | Firebase Auth |
+| **Character Purchases** | Restore purchased items | Google Play Billing / Firebase |
 
-We use your information to:
+### 2.2 Information Collected Automatically
 
-- Allow you to sign in with Google.
-- Save and synchronize your game progress.
-- Restore your game progress when you change devices.
-- Display leaderboards and achievements.
-- Improve gameplay and application performance.
-- Display personalized or non-personalized advertisements.
-- Detect bugs and prevent abuse.
+| Data Type | Purpose | Collection Method |
+|-----------|---------|-------------------|
+| **Device Model** | Compatibility, crash diagnostics | Device APIs |
+| **Operating System Version** | Compatibility | Device APIs |
+| **Unique Device Identifiers** | Crash reporting, analytics | Firebase Crashlytics |
+| **IP Address** | Fraud prevention, analytics | Network APIs |
+| **App Usage Events** | Improve game experience | Firebase Analytics |
+| **Gameplay Actions** | Difficulty tuning, analytics | Firebase Analytics |
+| **Session Duration** | Analytics | Firebase Analytics |
+| **Crash Logs** | Bug fixing and stability | Firebase Crashlytics |
 
-## Third-Party Services
+### 2.3 Information from Third-Party Services
 
-Our application uses the following services:
+**Google AdMob** may collect:
+- Advertising ID (GAID)
+- App installation events
+- Ad impression and click data
+- Device identifiers for ad delivery
+- Coarse location (country/region level based on IP)
 
-- **Google Sign-In** — Authentication
-- **Google AdMob** — Advertising
-- **Google Firebase** — Authentication, Firestore, Analytics, Cloud Storage, Crashlytics
+**Google Firebase** services may collect:
+- Authentication credentials (Google Sign-In tokens)
+- Cloud-saved game data
+- Performance and crash metrics
+- Feature usage analytics
 
-These services may collect information according to their own privacy policies.
+For more information on how Google collects and uses data, see [Google's Privacy Policy](https://policies.google.com/privacy).
 
-## Data Storage
+## 3. How We Use Your Information
 
-Game progress and account information are stored securely using Google Firebase services.
+We use the collected information for the following purposes:
 
-## Children's Privacy
+- **Authentication:** To verify your identity via Google Sign-In and provide secure access to your account.
+- **Cloud Save & Sync:** To store your game progress, coins, unlocked characters, and settings in the cloud, and to restore them across devices.
+- **Leaderboards & Achievements:** To display your player name and profile on global and weekly leaderboards.
+- **In-Game Purchases:** To process and restore character purchases made through Google Play Billing.
+- **Advertising:** To serve contextual and personalized advertisements through Google AdMob. You may opt out of personalized advertising in your device settings.
+- **Analytics & Improvement:** To understand how players interact with the Game, identify bugs, and improve gameplay experience.
+- **Crash Reporting:** To detect and fix stability issues through Firebase Crashlytics.
+- **Security & Fraud Prevention:** To detect and prevent unauthorized access, cheating, and abuse of our services.
+- **Legal Compliance:** To comply with applicable laws, regulations, and legal processes.
 
-Neon Flap 2100 is not intended to knowingly collect personal information from children under the applicable age without appropriate consent.
+## 4. Data Sharing and Disclosure
 
-## Data Security
+We do **not** sell your personal information. We may share your data only in the following limited circumstances:
 
-We take reasonable technical and organizational measures to protect your information from unauthorized access, disclosure, alteration, or destruction.
+| Recipient | Purpose | Data Shared |
+|-----------|---------|-------------|
+| **Google LLC** | Ad delivery, analytics, authentication, cloud services | Advertising ID, usage events, auth tokens, cloud data |
+| **Law Enforcement** | Legal compliance | Only when required by valid legal process |
 
-## Your Rights
+We may also disclose information if we believe disclosure is necessary to protect our rights, protect the safety of our users, or respond to a government request.
 
-You may request access to, correction of, or deletion of your personal information by contacting us.
+## 5. Data Retention
 
-## Changes to This Privacy Policy
+| Data Category | Retention Period | Deletion Trigger |
+|---------------|-----------------|------------------|
+| Google Account data | Duration of account | Account deletion request |
+| Game progress (Firestore) | Duration of account | Account deletion request |
+| Character purchase records | Duration of account | Account deletion request |
+| Crash logs (Crashlytics) | 90 days | Automatic expiration |
+| Analytics events | 14 months | Automatic expiration |
+| Ad interaction data | 90 days | Automatic expiration |
 
-We may update this Privacy Policy from time to time. Changes will become effective immediately after publication.
+When you delete your account, we delete or anonymize your personal data within 30 days, except where retention is required by law.
 
-## Contact Us
+## 6. Data Security
 
-If you have any questions regarding this Privacy Policy, please contact:
+We implement industry-standard security measures to protect your personal information:
 
-**Nexora Studios**  
-Email: mubashar513@yahoomail.com
+- **Encryption in Transit:** All data transmitted between the Game and our servers is encrypted using TLS 1.2+.
+- **Encryption at Rest:** Data stored in Firebase Firestore and Cloud Storage is encrypted at rest using Google-managed encryption keys.
+- **Access Controls:** Only authorized personnel have access to user data, and only for legitimate business purposes.
+- **Firebase Security Rules:** Our Firestore and Storage rules enforce strict access controls, ensuring users can only access their own data.
+
+While we take every reasonable precaution, no method of transmission over the Internet or electronic storage is 100% secure. We cannot guarantee absolute security.
+
+## 7. Your Rights and Choices
+
+### 7.1 Access and Correction
+
+You have the right to access and correct your personal information. You can update your player name directly in the Game. For other corrections, contact us at the email below.
+
+### 7.2 Data Deletion
+
+You have the right to request deletion of your personal data. To request deletion:
+1. Send an email to **supportnexorastudio6@gmail.com** with the subject line "Data Deletion Request."
+2. Include your player name and Google account email.
+3. We will process your request within 30 days.
+
+See our full [Data Deletion Instructions](./data-deletion.html) for details.
+
+### 7.3 Opt-Out of Personalized Advertising
+
+You can opt out of personalized advertising by:
+- Going to your device **Settings > Google > Ads** and enabling "Opt out of Ads Personalization."
+- Uninstalling the Game.
+
+Opting out will not remove ads entirely; you will still see non-personalized advertisements.
+
+### 7.4 Google Sign-In Revocation
+
+You can revoke the Game's access to your Google account at any time by visiting [Google Account Permissions](https://myaccount.google.com/permissions).
+
+### 7.5 GDPR Rights (EEA/UK Users)
+
+If you are located in the European Economic Area or the United Kingdom, you have additional rights under GDPR:
+- Right to access your personal data
+- Right to rectification of inaccurate data
+- Right to erasure ("right to be forgotten")
+- Right to restrict processing
+- Right to data portability
+- Right to object to processing
+- Right to withdraw consent at any time
+
+To exercise these rights, contact us at **supportnexorastudio6@gmail.com**.
+
+### 7.6 CCPA Rights (California Residents)
+
+If you are a California resident, you have the right to:
+- Know what personal information we collect and how it is used
+- Request deletion of your personal information
+- Opt out of the sale of your personal information (we do not sell personal information)
+- Not be discriminated against for exercising your CCPA rights
+
+To exercise these rights, contact us at **supportnexorastudio6@gmail.com**.
+
+## 8. Children's Privacy
+
+Neon Flap 2100 is not directed to children under the age of 13 (or the applicable age of digital consent in your jurisdiction). We do not knowingly collect personal information from children.
+
+If we become aware that we have collected personal information from a child without appropriate parental consent, we will take steps to delete that information promptly. If you believe a child has provided us with personal information, please contact us at **supportnexorastudio6@gmail.com**.
+
+## 9. Third-Party Services
+
+The Game integrates with the following third-party services, each of which may collect information subject to their own privacy policies:
+
+| Service | Provider | Purpose | Privacy Policy |
+|---------|----------|---------|----------------|
+| Google Sign-In | Google LLC | Authentication | [Google Privacy Policy](https://policies.google.com/privacy) |
+| Firebase Authentication | Google LLC | Account management | [Firebase Privacy](https://firebase.google.com/support/privacy) |
+| Cloud Firestore | Google LLC | Cloud data storage | [Firebase Privacy](https://firebase.google.com/support/privacy) |
+| Firebase Analytics | Google LLC | Usage analytics | [Firebase Privacy](https://firebase.google.com/support/privacy) |
+| Firebase Crashlytics | Google LLC | Crash reporting | [Firebase Privacy](https://firebase.google.com/support/privacy) |
+| Google AdMob | Google LLC | Advertising | [AdMob Privacy](https://support.google.com/admob/answer/6128543) |
+| Google Play Billing | Google LLC | In-app purchases | [Google Play Privacy](https://play.google.com/about/developer-content-policy/) |
+
+We encourage you to review the privacy policies of these third-party services.
+
+## 10. International Data Transfers
+
+Your information may be transferred to and processed in countries other than your own. Firebase and Google services operate globally, and data may be stored in data centers located in the United States, European Union, or other regions depending on Google's infrastructure.
+
+By using the Game, you consent to such transfers. We ensure that appropriate safeguards are in place to protect your data in accordance with this Privacy Policy.
+
+## 11. Changes to This Privacy Policy
+
+We may update this Privacy Policy from time to time to reflect changes in our practices, technologies, legal requirements, or other factors. When we make material changes, we will update the "Last Updated" date at the top of this policy and, where appropriate, notify you through the Game or by other means.
+
+We encourage you to review this Privacy Policy periodically. Your continued use of the Game after any changes constitutes your acceptance of the updated Privacy Policy.
+
+## 12. Contact Us
+
+If you have any questions, concerns, or requests regarding this Privacy Policy or our data practices, please contact us:
+
+**Nexora Studio**
+Email: supportnexorastudio6@gmail.com
+
+We will respond to your inquiry within 30 days.
 
 ---
 
-© 2026 Nexora Studios. All rights reserved.
+© 2026 Nexora Studio. All rights reserved.
