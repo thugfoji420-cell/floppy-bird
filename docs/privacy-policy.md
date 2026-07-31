@@ -7,7 +7,7 @@ effective_date: July 2026
 # Privacy Policy
 
 **Effective Date:** July 1, 2026
-**Last Updated:** July 1, 2026
+**Last Updated:** July 28, 2026
 **Developer:** Nexora Studio
 **Application:** Neon Flap 2100
 **Platform:** Android
@@ -27,10 +27,9 @@ We are committed to protecting your privacy and handling your data with transpar
 | Data Type | Purpose | Storage Location |
 |-----------|---------|------------------|
 | **Player Name** | Display on leaderboards and in-game | Firebase Firestore |
-| **Google Account Email** | Authentication and cloud save | Firebase Auth / Firestore |
+| **Google Account Email** | Authentication and account recovery support | Firebase Auth |
 | **Google Display Name** | Profile display in-game | Firebase Auth |
 | **Google Profile Picture URL** | Profile display in-game | Firebase Auth |
-| **Character Purchases** | Restore purchased items | Google Play Billing / Firebase |
 
 ### 2.2 Information Collected Automatically
 
@@ -38,11 +37,8 @@ We are committed to protecting your privacy and handling your data with transpar
 |-----------|---------|-------------------|
 | **Device Model** | Compatibility, crash diagnostics | Device APIs |
 | **Operating System Version** | Compatibility | Device APIs |
-| **Unique Device Identifiers** | Crash reporting, analytics | Firebase Crashlytics |
-| **IP Address** | Fraud prevention, analytics | Network APIs |
-| **App Usage Events** | Improve game experience | Firebase Analytics |
-| **Gameplay Actions** | Difficulty tuning, analytics | Firebase Analytics |
-| **Session Duration** | Analytics | Firebase Analytics |
+| **Unique Device Identifiers** | Crash reporting and diagnostics | Firebase Crashlytics |
+| **IP Address** | Ad delivery and service networking | Network APIs |
 | **Crash Logs** | Bug fixing and stability | Firebase Crashlytics |
 
 ### 2.3 Information from Third-Party Services
@@ -56,9 +52,9 @@ We are committed to protecting your privacy and handling your data with transpar
 
 **Google Firebase** services may collect:
 - Authentication credentials (Google Sign-In tokens)
-- Cloud-saved game data
-- Performance and crash metrics
-- Feature usage analytics
+- Limited account-linked profile data used by the current release
+- Crash and diagnostic metrics
+- App integrity and anti-abuse signals
 
 For more information on how Google collects and uses data, see [Google's Privacy Policy](https://policies.google.com/privacy).
 
@@ -67,11 +63,9 @@ For more information on how Google collects and uses data, see [Google's Privacy
 We use the collected information for the following purposes:
 
 - **Authentication:** To verify your identity via Google Sign-In and provide secure access to your account.
-- **Cloud Save & Sync:** To store your game progress, coins, unlocked characters, and settings in the cloud, and to restore them across devices.
-- **Leaderboards & Achievements:** To display your player name and profile on global and weekly leaderboards.
-- **In-Game Purchases:** To process and restore character purchases made through Google Play Billing.
+- **Profile Continuity:** To keep signed-in account identity, player name, high score, and selected settings available where supported by the current release.
+- **Leaderboards & Social Features:** To display player names and public profile details only when those features are enabled in the shipped build.
 - **Advertising:** To serve contextual and personalized advertisements through Google AdMob. You may opt out of personalized advertising in your device settings.
-- **Analytics & Improvement:** To understand how players interact with the Game, identify bugs, and improve gameplay experience.
 - **Crash Reporting:** To detect and fix stability issues through Firebase Crashlytics.
 - **Security & Fraud Prevention:** To detect and prevent unauthorized access, cheating, and abuse of our services.
 - **Legal Compliance:** To comply with applicable laws, regulations, and legal processes.
@@ -82,7 +76,7 @@ We do **not** sell your personal information. We may share your data only in the
 
 | Recipient | Purpose | Data Shared |
 |-----------|---------|-------------|
-| **Google LLC** | Ad delivery, analytics, authentication, cloud services | Advertising ID, usage events, auth tokens, cloud data |
+| **Google LLC** | Ad delivery, authentication, crash reporting, cloud profile services | Advertising ID, auth tokens, diagnostic data, limited profile data |
 | **Law Enforcement** | Legal compliance | Only when required by valid legal process |
 
 We may also disclose information if we believe disclosure is necessary to protect our rights, protect the safety of our users, or respond to a government request.
@@ -92,11 +86,9 @@ We may also disclose information if we believe disclosure is necessary to protec
 | Data Category | Retention Period | Deletion Trigger |
 |---------------|-----------------|------------------|
 | Google Account data | Duration of account | Account deletion request |
-| Game progress (Firestore) | Duration of account | Account deletion request |
-| Character purchase records | Duration of account | Account deletion request |
-| Crash logs (Crashlytics) | 90 days | Automatic expiration |
-| Analytics events | 14 months | Automatic expiration |
-| Ad interaction data | 90 days | Automatic expiration |
+| Account-linked profile/settings data | Duration of account | Account deletion request |
+| Crash logs (Crashlytics) | According to Google-controlled service retention | Provider deletion/expiration controls |
+| Ad interaction data | According to Google-controlled service retention | Provider deletion/expiration controls |
 
 When you delete your account, we delete or anonymize your personal data within 30 days, except where retention is required by law.
 
@@ -120,9 +112,9 @@ You have the right to access and correct your personal information. You can upda
 ### 7.2 Data Deletion
 
 You have the right to request deletion of your personal data. To request deletion:
-1. Send an email to **supportnexorastudio6@gmail.com** with the subject line "Data Deletion Request."
-2. Include your player name and Google account email.
-3. We will process your request within 30 days.
+1. In the Game, open **Settings > Account > Delete Account**, confirm, and complete Google re-authentication when requested; or
+2. Send an email to **supportnexorastudio6@gmail.com** with the subject line "Data Deletion Request" and include your player name and Google account email.
+3. Email requests will be processed within 30 days.
 
 See our full [Data Deletion Instructions](./data-deletion.html) for details.
 
@@ -176,10 +168,12 @@ The Game integrates with the following third-party services, each of which may c
 | Google Sign-In | Google LLC | Authentication | [Google Privacy Policy](https://policies.google.com/privacy) |
 | Firebase Authentication | Google LLC | Account management | [Firebase Privacy](https://firebase.google.com/support/privacy) |
 | Cloud Firestore | Google LLC | Cloud data storage | [Firebase Privacy](https://firebase.google.com/support/privacy) |
-| Firebase Analytics | Google LLC | Usage analytics | [Firebase Privacy](https://firebase.google.com/support/privacy) |
+| Cloud Functions | Google LLC | Secure backend operations | [Firebase Privacy](https://firebase.google.com/support/privacy) |
+| Firebase Storage | Google LLC | Downloadable game resources | [Firebase Privacy](https://firebase.google.com/support/privacy) |
 | Firebase Crashlytics | Google LLC | Crash reporting | [Firebase Privacy](https://firebase.google.com/support/privacy) |
 | Google AdMob | Google LLC | Advertising | [AdMob Privacy](https://support.google.com/admob/answer/6128543) |
-| Google Play Billing | Google LLC | In-app purchases | [Google Play Privacy](https://play.google.com/about/developer-content-policy/) |
+| Google UMP | Google LLC | Advertising consent choices | [Google Privacy Policy](https://policies.google.com/privacy) |
+| Play Integrity / Firebase App Check | Google LLC | App integrity and abuse prevention | [Google Privacy Policy](https://policies.google.com/privacy) |
 
 We encourage you to review the privacy policies of these third-party services.
 

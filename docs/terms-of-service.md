@@ -49,7 +49,7 @@ You are responsible for maintaining the security of your Google account and for 
 
 ### 4.3 Account Data
 
-Your game progress, including coins, unlocked characters, achievements, and settings, is stored in your Google account via Firebase Cloud Firestore. You are responsible for maintaining access to your Google account to preserve this data.
+The current public release may store limited account-linked profile and settings data via Firebase services. Offline play remains supported even when online features are reduced or unavailable.
 
 ## 5. Virtual Currency and Items
 
@@ -64,15 +64,7 @@ The Game provides a virtual currency called "Coins" that can be earned through g
 
 ### 5.2 In-App Purchases
 
-The Game offers optional in-app purchases for virtual characters. These purchases:
-- Are processed through Google Play Billing
-- Are non-refundable once completed (except as required by applicable law)
-- Grant a personal, non-transferable license to use the purchased content within the Game
-- May be restored if you reinstall the Game on the same device or sign in on a new device with the same Google account
-
-### 5.3 Refunds
-
-All in-app purchases are final and non-refundable. If you experience issues with a purchase, please contact us at **supportnexorastudio6@gmail.com** and we will work to resolve the issue. Refunds for in-app purchases are handled in accordance with Google Play's refund policy.
+The current public release does not enable live Google Play real-money purchases. If optional purchases are introduced in a later version, they will be subject to Google Play Billing terms and the then-current in-game disclosures.
 
 ## 6. Advertisements
 
@@ -110,7 +102,7 @@ You agree not to:
 
 ### 8.1 Fair Play
 
-The Game provides global and weekly leaderboards. All players are expected to compete fairly. We reserve the right to remove scores, reset leaderboards, or restrict access to competitive features for players who engage in cheating, exploitation, or unfair practices.
+When competitive or public ranking features are enabled, all players are expected to compete fairly. We reserve the right to remove scores, reset rankings, or restrict access to competitive features for players who engage in cheating, exploitation, or unfair practices.
 
 ### 8.2 Player Names
 
@@ -118,7 +110,7 @@ Your player name is visible to other users on leaderboards. You are solely respo
 
 ### 8.3 Leaderboard Data
 
-Leaderboard scores and related data are stored in Firebase Firestore and are subject to the data retention practices described in our Privacy Policy.
+Public ranking and related profile data, when enabled, are subject to the data retention practices described in our Privacy Policy.
 
 ## 9. Intellectual Property
 

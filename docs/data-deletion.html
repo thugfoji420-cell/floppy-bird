@@ -34,7 +34,7 @@
 <body>
   <div class="container">
     <h1>Data Deletion Instructions</h1>
-    <p style="text-align:center;color:#aaa;margin-bottom:30px;"><strong>Effective Date:</strong> July 1, 2026<br><strong>Last Updated:</strong> July 1, 2026<br>Developer: Nexora Studio | Platform: Android</p>
+    <p style="text-align:center;color:#aaa;margin-bottom:30px;"><strong>Effective Date:</strong> July 1, 2026<br><strong>Last Updated:</strong> July 28, 2026<br>Developer: Nexora Studio | Platform: Android</p>
 
     <h2>Overview</h2>
     <p>This page explains how to request deletion of your personal data collected by Neon Flap 2100. We are committed to respecting your privacy and providing you with control over your personal information.</p>
@@ -44,9 +44,9 @@
     <table>
       <tr><th>Data Category</th><th>Description</th><th>Storage Location</th></tr>
       <tr><td><strong>Player Profile</strong></td><td>Your player name and display information</td><td>Firebase Firestore</td></tr>
-      <tr><td><strong>Game Progress</strong></td><td>Coins, unlocked characters, achievements, and settings</td><td>Firebase Firestore</td></tr>
-      <tr><td><strong>Leaderboard Entries</strong></td><td>Your scores and rankings on global and weekly leaderboards</td><td>Firebase Firestore</td></tr>
-      <tr><td><strong>Cloud Save Data</strong></td><td>All cloud-synchronized game data</td><td>Firebase Firestore</td></tr>
+      <tr><td><strong>Game Profile Data</strong></td><td>Coins, scores, inventory, achievements, rewards, settings, and cloud-save data</td><td>Firebase Firestore</td></tr>
+      <tr><td><strong>Public Profile Data</strong></td><td>Your public player name and profile display data</td><td>Firebase Firestore</td></tr>
+      <tr><td><strong>Leaderboard and Notification Data</strong></td><td>Your rankings and notifications authored by your account</td><td>Firebase Firestore</td></tr>
       <tr><td><strong>Account Records</strong></td><td>Authentication records and account metadata</td><td>Firebase Auth</td></tr>
     </table>
 
@@ -54,12 +54,11 @@
     <p>The following data is retained as described below:</p>
     <table>
       <tr><th>Data Category</th><th>Retention Period</th><th>Reason</th></tr>
-      <tr><td><strong>Crash Logs</strong></td><td>90 days from creation</td><td>Automatic expiration via Firebase Crashlytics</td></tr>
-      <tr><td><strong>Analytics Events</strong></td><td>14 months from creation</td><td>Automatic expiration via Firebase Analytics</td></tr>
-      <tr><td><strong>Ad Interaction Data</strong></td><td>90 days from creation</td><td>Automatic expiration via Google AdMob</td></tr>
+      <tr><td><strong>Crash Logs</strong></td><td>According to Google-controlled service retention</td><td>Managed by Firebase Crashlytics</td></tr>
+      <tr><td><strong>Ad Interaction Data</strong></td><td>According to Google-controlled service retention</td><td>Managed by Google AdMob</td></tr>
       <tr><td><strong>Aggregated/Anonymized Data</strong></td><td>Indefinite</td><td>Non-identifiable statistical data used for game improvement</td></tr>
     </table>
-    <p>Crash logs, analytics events, and ad interaction data are stored by Google's third-party services and are automatically purged on their retention schedules.</p>
+    <p>Crash logs and ad interaction data are stored by Google's third-party services under Google-controlled retention and deletion settings. We do not directly control immediate deletion of this provider-held data, and the Game does not intentionally add account identifiers or player names to Crashlytics diagnostics.</p>
 
     <h2>How to Request Data Deletion</h2>
 
@@ -90,25 +89,26 @@
     <p>The Neon Flap 2100 app provides the following data management options directly within the Game:</p>
     <ul>
       <li><strong>Change Player Name:</strong> You can update your player name at any time through the Game's settings or player profile screen.</li>
-      <li><strong>Sign Out:</strong> You can sign out of your Google account through the Game's settings screen. This disconnects your account but does not delete your stored data.</li>
+      <li><strong>Sign Out:</strong> You can sign out of your Google account through the Game's settings screen. This disconnects your account but does not delete stored account data.</li>
+      <li><strong>Delete Account:</strong> Open <strong>Settings &gt; Account &gt; Delete Account</strong>, confirm the warning, and complete Google re-authentication when requested. This starts deletion of your Firebase account and associated game data without requiring an email.</li>
     </ul>
-    <p>For full data deletion, please follow the email instructions above.</p>
+    <p>The in-app Delete Account option or the email process above can be used for full account deletion.</p>
 
     <h2>Third-Party Data</h2>
     <p>Some data is collected and stored by third-party services that we do not directly control. You may also wish to:</p>
     <ul>
       <li><strong>Revoke Google Sign-In access:</strong> Visit <a href="https://myaccount.google.com/permissions">Google Account Permissions</a> and remove Neon Flap 2100's access.</li>
       <li><strong>Opt out of ad tracking:</strong> Go to <strong>Settings &gt; Google &gt; Ads</strong> on your device and enable "Opt out of Ads Personalization."</li>
-      <li><strong>Request data from Google directly:</strong> For data held by Google Analytics, AdMob, or Firebase, you may also submit requests through <a href="https://policies.google.com/privacy#info-choices">Google's Privacy &amp; Terms</a> page.</li>
+      <li><strong>Request data from Google directly:</strong> For data held by AdMob or Firebase infrastructure, you may also submit requests through <a href="https://policies.google.com/privacy#info-choices">Google's Privacy &amp; Terms</a> page.</li>
     </ul>
 
     <h2>Data Retention After Deletion</h2>
     <p>After we process your deletion request:</p>
     <ul>
       <li>Your account and all associated personal data will be permanently deleted from our Firebase Firestore database</li>
-      <li>Your Google Sign-In authentication record will be removed</li>
+      <li>Your Firebase Authentication account linked to Google Sign-In will be removed; your Google account itself is not deleted</li>
       <li>You will no longer be able to access cloud-saved game progress</li>
-      <li>Any in-app purchases associated with your account will be forfeited and cannot be restored</li>
+      <li>Any future account-linked online features tied to that account may no longer be restorable</li>
     </ul>
     <p>If you wish to use the Game again after data deletion, you will need to create a new profile with a new player name.</p>
 

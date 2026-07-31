@@ -34,7 +34,7 @@
 <body>
   <div class="container">
     <h1>Privacy Policy</h1>
-    <p style="text-align:center;color:#aaa;margin-bottom:30px;"><strong>Effective Date:</strong> July 1, 2026<br><strong>Last Updated:</strong> July 1, 2026<br>Developer: Nexora Studio | Platform: Android</p>
+    <p style="text-align:center;color:#aaa;margin-bottom:30px;"><strong>Effective Date:</strong> July 1, 2026<br><strong>Last Updated:</strong> July 28, 2026<br>Developer: Nexora Studio | Platform: Android</p>
 
     <h2>1. Introduction</h2>
     <p>Welcome to Neon Flap 2100 ("the Game"), developed by Nexora Studio ("we," "us," or "our"). This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our Game on Android devices. By downloading, installing, or using the Game, you agree to the practices described in this Privacy Policy.</p>
@@ -46,10 +46,9 @@
     <table>
       <tr><th>Data Type</th><th>Purpose</th><th>Storage Location</th></tr>
       <tr><td><strong>Player Name</strong></td><td>Display on leaderboards and in-game</td><td>Firebase Firestore</td></tr>
-      <tr><td><strong>Google Account Email</strong></td><td>Authentication and cloud save</td><td>Firebase Auth / Firestore</td></tr>
+      <tr><td><strong>Google Account Email</strong></td><td>Authentication and account recovery support</td><td>Firebase Auth</td></tr>
       <tr><td><strong>Google Display Name</strong></td><td>Profile display in-game</td><td>Firebase Auth</td></tr>
       <tr><td><strong>Google Profile Picture URL</strong></td><td>Profile display in-game</td><td>Firebase Auth</td></tr>
-      <tr><td><strong>Character Purchases</strong></td><td>Restore purchased items</td><td>Google Play Billing / Firebase</td></tr>
     </table>
 
     <h3>2.2 Information Collected Automatically</h3>
@@ -57,27 +56,22 @@
       <tr><th>Data Type</th><th>Purpose</th><th>Collection Method</th></tr>
       <tr><td><strong>Device Model</strong></td><td>Compatibility, crash diagnostics</td><td>Device APIs</td></tr>
       <tr><td><strong>Operating System Version</strong></td><td>Compatibility</td><td>Device APIs</td></tr>
-      <tr><td><strong>Unique Device Identifiers</strong></td><td>Crash reporting, analytics</td><td>Firebase Crashlytics</td></tr>
-      <tr><td><strong>IP Address</strong></td><td>Fraud prevention, analytics</td><td>Network APIs</td></tr>
-      <tr><td><strong>App Usage Events</strong></td><td>Improve game experience</td><td>Firebase Analytics</td></tr>
-      <tr><td><strong>Gameplay Actions</strong></td><td>Difficulty tuning, analytics</td><td>Firebase Analytics</td></tr>
-      <tr><td><strong>Session Duration</strong></td><td>Analytics</td><td>Firebase Analytics</td></tr>
+      <tr><td><strong>Unique Device Identifiers</strong></td><td>Crash reporting and diagnostics</td><td>Firebase Crashlytics</td></tr>
+      <tr><td><strong>IP Address</strong></td><td>Ad delivery and service networking</td><td>Network APIs</td></tr>
       <tr><td><strong>Crash Logs</strong></td><td>Bug fixing and stability</td><td>Firebase Crashlytics</td></tr>
     </table>
 
     <h3>2.3 Information from Third-Party Services</h3>
     <p><strong>Google AdMob</strong> may collect: Advertising ID (GAID), app installation events, ad impression and click data, device identifiers for ad delivery, and coarse location (country/region level based on IP).</p>
-    <p><strong>Google Firebase</strong> services may collect: Authentication credentials (Google Sign-In tokens), cloud-saved game data, performance and crash metrics, and feature usage analytics.</p>
+    <p><strong>Google Firebase</strong> services may collect: Authentication credentials (Google Sign-In tokens), limited account-linked profile data used by the current release, crash and diagnostic metrics, and app-integrity or anti-abuse signals.</p>
     <p>For more information on how Google collects and uses data, see <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>.</p>
 
     <h2>3. How We Use Your Information</h2>
     <ul>
       <li><strong>Authentication:</strong> To verify your identity via Google Sign-In and provide secure access to your account.</li>
-      <li><strong>Cloud Save &amp; Sync:</strong> To store your game progress, coins, unlocked characters, and settings in the cloud, and to restore them across devices.</li>
-      <li><strong>Leaderboards &amp; Achievements:</strong> To display your player name and profile on global and weekly leaderboards.</li>
-      <li><strong>In-App Purchases:</strong> To process and restore character purchases made through Google Play Billing.</li>
+      <li><strong>Profile Continuity:</strong> To keep signed-in account identity, player name, high score, and selected settings available where supported by the current release.</li>
+      <li><strong>Leaderboards &amp; Social Features:</strong> To display player names and public profile details only when those features are enabled in the shipped build.</li>
       <li><strong>Advertising:</strong> To serve contextual and personalized advertisements through Google AdMob. You may opt out of personalized advertising in your device settings.</li>
-      <li><strong>Analytics &amp; Improvement:</strong> To understand how players interact with the Game, identify bugs, and improve gameplay experience.</li>
       <li><strong>Crash Reporting:</strong> To detect and fix stability issues through Firebase Crashlytics.</li>
       <li><strong>Security &amp; Fraud Prevention:</strong> To detect and prevent unauthorized access, cheating, and abuse of our services.</li>
       <li><strong>Legal Compliance:</strong> To comply with applicable laws, regulations, and legal processes.</li>
@@ -87,7 +81,7 @@
     <p>We do <strong>not</strong> sell your personal information. We may share your data only in the following limited circumstances:</p>
     <table>
       <tr><th>Recipient</th><th>Purpose</th><th>Data Shared</th></tr>
-      <tr><td><strong>Google LLC</strong></td><td>Ad delivery, analytics, authentication, cloud services</td><td>Advertising ID, usage events, auth tokens, cloud data</td></tr>
+      <tr><td><strong>Google LLC</strong></td><td>Ad delivery, authentication, crash reporting, cloud profile services</td><td>Advertising ID, auth tokens, diagnostic data, limited profile data</td></tr>
       <tr><td><strong>Law Enforcement</strong></td><td>Legal compliance</td><td>Only when required by valid legal process</td></tr>
     </table>
     <p>We may also disclose information if we believe disclosure is necessary to protect our rights, protect the safety of our users, or respond to a government request.</p>
@@ -96,11 +90,9 @@
     <table>
       <tr><th>Data Category</th><th>Retention Period</th><th>Deletion Trigger</th></tr>
       <tr><td>Google Account data</td><td>Duration of account</td><td>Account deletion request</td></tr>
-      <tr><td>Game progress (Firestore)</td><td>Duration of account</td><td>Account deletion request</td></tr>
-      <tr><td>Character purchase records</td><td>Duration of account</td><td>Account deletion request</td></tr>
-      <tr><td>Crash logs (Crashlytics)</td><td>90 days</td><td>Automatic expiration</td></tr>
-      <tr><td>Analytics events</td><td>14 months</td><td>Automatic expiration</td></tr>
-      <tr><td>Ad interaction data</td><td>90 days</td><td>Automatic expiration</td></tr>
+      <tr><td>Account-linked profile/settings data</td><td>Duration of account</td><td>Account deletion request</td></tr>
+      <tr><td>Crash logs (Crashlytics)</td><td>According to Google-controlled service retention</td><td>Provider deletion/expiration controls</td></tr>
+      <tr><td>Ad interaction data</td><td>According to Google-controlled service retention</td><td>Provider deletion/expiration controls</td></tr>
     </table>
     <p>When you delete your account, we delete or anonymize your personal data within 30 days, except where retention is required by law.</p>
 
@@ -120,7 +112,7 @@
     <p>You have the right to access and correct your personal information. You can update your player name directly in the Game. For other corrections, contact us at the email below.</p>
 
     <h3>7.2 Data Deletion</h3>
-    <p>You have the right to request deletion of your personal data. To request deletion, send an email to <strong>supportnexorastudio6@gmail.com</strong> with the subject line "Data Deletion Request." Include your player name and Google account email. We will process your request within 30 days.</p>
+    <p>You have the right to request deletion of your personal data. In the Game, open <strong>Settings &gt; Account &gt; Delete Account</strong>, confirm, and complete Google re-authentication when requested. Alternatively, email <strong>supportnexorastudio6@gmail.com</strong> with the subject "Data Deletion Request" and include your player name and Google account email. Email requests will be processed within 30 days.</p>
     <p>See our full <a href="./data-deletion.html">Data Deletion Instructions</a> for details.</p>
 
     <h3>7.3 Opt-Out of Personalized Advertising</h3>
@@ -162,11 +154,13 @@
       <tr><th>Service</th><th>Provider</th><th>Purpose</th></tr>
       <tr><td>Google Sign-In</td><td>Google LLC</td><td>Authentication</td></tr>
       <tr><td>Firebase Authentication</td><td>Google LLC</td><td>Account management</td></tr>
-      <tr><td>Cloud Firestore</td><td>Google LLC</td><td>Cloud data storage</td></tr>
-      <tr><td>Firebase Analytics</td><td>Google LLC</td><td>Usage analytics</td></tr>
+      <tr><td>Cloud Firestore</td><td>Google LLC</td><td>Limited profile/settings storage</td></tr>
+      <tr><td>Cloud Functions</td><td>Google LLC</td><td>Secure backend operations</td></tr>
+      <tr><td>Firebase Storage</td><td>Google LLC</td><td>Downloadable game resources</td></tr>
       <tr><td>Firebase Crashlytics</td><td>Google LLC</td><td>Crash reporting</td></tr>
       <tr><td>Google AdMob</td><td>Google LLC</td><td>Advertising</td></tr>
-      <tr><td>Google Play Billing</td><td>Google LLC</td><td>In-app purchases</td></tr>
+      <tr><td>Google UMP</td><td>Google LLC</td><td>Advertising consent choices</td></tr>
+      <tr><td>Play Integrity / Firebase App Check</td><td>Google LLC</td><td>App integrity and abuse prevention</td></tr>
     </table>
     <p>We encourage you to review the privacy policies of these third-party services.</p>
 

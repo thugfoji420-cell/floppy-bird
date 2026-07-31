@@ -7,7 +7,7 @@ effective_date: July 2026
 # Data Deletion Instructions
 
 **Effective Date:** July 1, 2026
-**Last Updated:** July 1, 2026
+**Last Updated:** July 28, 2026
 **Developer:** Nexora Studio
 **Application:** Neon Flap 2100
 **Platform:** Android
@@ -25,9 +25,9 @@ When you submit a valid deletion request, we will permanently delete the followi
 | Data Category | Description | Storage Location |
 |---------------|-------------|------------------|
 | **Player Profile** | Your player name and display information | Firebase Firestore |
-| **Game Progress** | Coins, unlocked characters, achievements, and settings | Firebase Firestore |
-| **Leaderboard Entries** | Your scores and rankings on global and weekly leaderboards | Firebase Firestore |
-| **Cloud Save Data** | All cloud-synchronized game data | Firebase Firestore |
+| **Game Profile Data** | Coins, scores, inventory, achievements, rewards, settings, and cloud-save data | Firebase Firestore |
+| **Public Profile Data** | Your public player name and profile display data | Firebase Firestore |
+| **Leaderboard and Notification Data** | Your rankings and notifications authored by your account | Firebase Firestore |
 | **Account Records** | Authentication records and account metadata | Firebase Auth |
 
 ## What Data Is NOT Deleted
@@ -36,12 +36,11 @@ The following data is retained as described below:
 
 | Data Category | Retention Period | Reason |
 |---------------|-----------------|--------|
-| **Crash Logs** | 90 days from creation | Automatic expiration via Firebase Crashlytics |
-| **Analytics Events** | 14 months from creation | Automatic expiration via Firebase Analytics |
-| **Ad Interaction Data** | 90 days from creation | Automatic expiration via Google AdMob |
+| **Crash Logs** | According to Google-controlled service retention | Managed by Firebase Crashlytics |
+| **Ad Interaction Data** | According to Google-controlled service retention | Managed by Google AdMob |
 | **Aggregated/Anonymized Data** | Indefinite | Non-identifiable statistical data used for game improvement |
 
-Crash logs, analytics events, and ad interaction data are stored by Google's third-party services (Firebase, AdMob) and are automatically purged by those services on their retention schedules. We do not directly control the deletion of this data, but it is not linked to your identity once your account is deleted.
+Crash logs and ad interaction data are stored by Google's third-party services (Firebase and AdMob) under Google-controlled retention and deletion settings. We do not directly control immediate deletion of this provider-held data, and the Game does not intentionally add account identifiers or player names to Crashlytics diagnostics.
 
 ## How to Request Data Deletion
 
@@ -83,9 +82,10 @@ If we are unable to verify your identity based on the information provided, we m
 The Neon Flap 2100 app provides the following data management options directly within the Game:
 
 - **Change Player Name:** You can update your player name at any time through the Game's settings or player profile screen.
-- **Sign Out:** You can sign out of your Google account through the Game's settings screen. This disconnects your account from the Game but does not delete your stored data.
+- **Sign Out:** You can sign out of your Google account through the Game's settings screen. This disconnects your account from the Game but does not delete stored account data.
+- **Delete Account:** Open **Settings > Account > Delete Account**, confirm the warning, and complete Google re-authentication when requested. This starts deletion of your Firebase account and associated game data without requiring an email.
 
-For full data deletion, please follow the email instructions above.
+The in-app Delete Account option or the email process above can be used for full account deletion.
 
 ## Third-Party Data
 
@@ -93,16 +93,16 @@ Some data is collected and stored by third-party services that we do not directl
 
 - **Revoke Google Sign-In access:** Visit [Google Account Permissions](https://myaccount.google.com/permissions) and remove Neon Flap 2100's access.
 - **Opt out of ad tracking:** Go to **Settings > Google > Ads** on your device and enable "Opt out of Ads Personalization."
-- **Request data from Google directly:** For data held by Google Analytics, AdMob, or Firebase, you may also submit requests through [Google's Privacy & Terms](https://policies.google.com/privacy#info-choices) page.
+- **Request data from Google directly:** For data held by AdMob or Firebase infrastructure, you may also submit requests through [Google's Privacy & Terms](https://policies.google.com/privacy#info-choices) page.
 
 ## Data Retention After Deletion
 
 After we process your deletion request:
 
 - Your account and all associated personal data will be permanently deleted from our Firebase Firestore database
-- Your Google Sign-In authentication record will be removed
+- Your Firebase Authentication account linked to Google Sign-In will be removed; your Google account itself is not deleted
 - You will no longer be able to access cloud-saved game progress
-- Any in-app purchases associated with your account will be forfeited and cannot be restored
+- Any future account-linked online features tied to that account may no longer be restorable
 
 If you wish to use the Game again after data deletion, you will need to create a new profile with a new player name.
 
